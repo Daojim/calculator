@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   min-height: 95vh;
   background-color: rgb(48, 194, 194);
 }
@@ -20,4 +20,8 @@ body {
 
 #display {
   background-color: rgb(194, 185, 185);
+  height: 50px;
+  margin: 5px;
+  font-size: x-large;
+  text-align: right;
 }
