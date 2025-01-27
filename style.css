@@ -1,0 +1,14 @@
+body {
+  background-color: salmon;
+}
+
+#display {
+  background-color: grey;
+}
+
+#calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
