@@ -2,14 +2,14 @@ body {
   background-color: salmon;
 }
 
-#calculator {
+#container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   min-height: 95vh;
-  background-color: aqua;
+  background-color: rgb(48, 194, 194);
 }
 
 #display {
