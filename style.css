@@ -24,10 +24,9 @@ body {
 
 #display {
   background-color: rgb(194, 185, 185);
-  height: 90px;
-  font-size: x-large;
+  height: 60px;
+  font-size: xx-large;
   text-align: right;
-  flex: 0;
   padding: 10px;
 }
 
@@ -47,4 +46,8 @@ button {
   display: flex; /* Use Flexbox for rows */
   flex: 1;
   gap: 5px; /* Add spacing between buttons */
+}
+
+#row {
+  padding: 2px;
 }
