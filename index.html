@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jimmy's Calculator</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,25 +12,32 @@
       <div id="box">
         <div id="display">012345</div>
         <div id="buttons">
-          <button id="clear">clear</button>
-          <button id="/ operator">/</button>
-          <button id="7 number">7</button>
-          <button id="8 number">8</button>
-          <button id="9 number">9</button>
-          <button id="* operator">*</button>
-
-          <button id="4 number">4</button>
-          <button id="5 number">5</button>
-          <button id="6 number">6</button>
-          <button id="- operator">-</button>
-
-          <button id="1 number">1</button>
-          <button id="2 number">2</button>
-          <button id="3 number">3</button>
-          <button id="+ operator">+</button>
-
-          <button id="0 number">0</button>
-          <button id="= operator">=</button>
+          <div id="row1">
+            <button id="clear">clear</button>
+            <button id="/ operator">/</button>
+          </div>
+          <div id="row2">
+            <button id="7 number">7</button>
+            <button id="8 number">8</button>
+            <button id="9 number">9</button>
+            <button id="* operator">*</button>
+          </div>
+          <div id="row3">
+            <button id="4 number">4</button>
+            <button id="5 number">5</button>
+            <button id="6 number">6</button>
+            <button id="- operator">-</button>
+          </div>
+          <div id="row4">
+            <button id="1 number">1</button>
+            <button id="2 number">2</button>
+            <button id="3 number">3</button>
+            <button id="+ operator">+</button>
+          </div>
+          <div id="row5">
+            <button id="0 number">0</button>
+            <button id="= operator">=</button>
+          </div>
         </div>
       </div>
     </div>
