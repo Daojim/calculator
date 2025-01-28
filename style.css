@@ -48,3 +48,8 @@ button {
   flex: 1;
   gap: 5px; /* Add spacing between buttons */
 }
+
+button#clear,
+button#zero {
+  flex-grow: 3.8;
+}
