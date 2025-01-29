@@ -28,8 +28,9 @@ let displayNum = "0";
 const display = document.getElementById("display");
 display.innerText = displayNum;
 
-const operand = document.querySelector(".operand");
-
-operand.addEventListener("click", () => {
-  console.log("You have pressed number" + operand.value);
+const operand = document.querySelectorAll(".operand").forEach((button) => {
+  button.onclick = function () {
+    displayNum += button.value;
+    alert(displayNum);
+  };
 });
