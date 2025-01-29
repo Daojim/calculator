@@ -30,6 +30,8 @@ function updateDisplay() {
   display.innerText = displayNum;
 }
 
+updateDisplay();
+
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
     displayNum += button.value;
