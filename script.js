@@ -25,8 +25,8 @@ let secondOperator = null;
 let result = null;
 let displayNum = "0";
 
-const display = document.querySelector("#display");
-display.textContent("displayNum");
+const display = document.getElementById("display");
+display.innerText = displayNum;
 
 const operand = document.querySelector(".operand");
 
