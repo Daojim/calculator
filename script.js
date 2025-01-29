@@ -22,4 +22,10 @@ let firstNum = 0;
 let secondNum = 0;
 let operator;
 
+const display = document.querySelector("#display");
+
 const operand = document.querySelector(".operand");
+
+operand.addEventListener("click", () => {
+  console.log("You have pressed number" + operand.value);
+});

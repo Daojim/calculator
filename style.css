@@ -51,7 +51,7 @@ button {
 
 button#clear,
 button#zero {
-  flex-grow: 3.8;
+  flex-grow: 3.5;
 }
 
 button.operator {
