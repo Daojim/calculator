@@ -21,3 +21,5 @@ function operate(operator, num1, num2) {
 let firstNum = 0;
 let secondNum = 0;
 let operator;
+
+const operand = document.querySelector(".operand");
