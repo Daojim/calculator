@@ -18,11 +18,15 @@ function operate(operator, num1, num2) {
   return operator(num1, num2);
 }
 
-let firstNum = 0;
-let secondNum = 0;
-let operator;
+let firstNum = null;
+let secondNum = null;
+let firstOperator = null;
+let secondOperator = null;
+let result = null;
+let displayNum = "0";
 
 const display = document.querySelector("#display");
+display.textContent("displayNum");
 
 const operand = document.querySelector(".operand");
 
