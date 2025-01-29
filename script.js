@@ -25,12 +25,14 @@ let secondOperator = null;
 let result = null;
 let displayNum = "0";
 
-const display = document.getElementById("display");
-display.innerText = displayNum;
+function updateDisplay() {
+  const display = document.getElementById("display");
+  display.innerText = displayNum;
+}
 
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
     displayNum += button.value;
-    alert(displayNum);
+    updateDisplay();
   };
 });
