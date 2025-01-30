@@ -53,3 +53,10 @@ const operand = document.querySelectorAll(".operand").forEach((button) => {
     }
   };
 });
+
+const operator = document.querySelectorAll(".operator").forEach((button) => {
+  button.onclick = function () {
+    firstNum = displayNum;
+    alert(firstNum);
+  };
+});
