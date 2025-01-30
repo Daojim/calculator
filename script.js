@@ -56,7 +56,12 @@ const operand = document.querySelectorAll(".operand").forEach((button) => {
 
 const operator = document.querySelectorAll(".operator").forEach((button) => {
   button.onclick = function () {
-    firstNum = displayNum;
-    alert(firstNum);
+    if (firstNum === null) {
+      firstNum = displayNum;
+      firstOperator = button.value;
+      alert(firstNum);
+      alert(firstOperator);
+      displayNum = "0";
+    }
   };
 });
