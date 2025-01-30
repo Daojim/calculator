@@ -32,6 +32,16 @@ function updateDisplay() {
 
 updateDisplay();
 
+function clearDisplay() {
+  firstNum = null;
+  secondNum = null;
+  firstOperator = null;
+  secondOperator = null;
+  result = null;
+  displayNum = "0";
+  updateDisplay();
+}
+
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
     displayNum += button.value;
