@@ -62,6 +62,11 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
       alert(firstNum);
       alert(firstOperator);
       displayNum = "0";
+    } else if (firstNum !== null && secondNum === null) {
+      secondNum = displayNum;
+      secondOperator = button.value;
+      alert(secondNum);
+      alert(secondOperator);
     }
   };
 });
