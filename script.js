@@ -44,7 +44,12 @@ function clearDisplay() {
 
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
-    displayNum += button.value;
-    updateDisplay();
+    if (displayNum === 0 || displayNum === "0") {
+      displayNum = button.value;
+      updateDisplay();
+    } else if (displayNum !== 0) {
+      displayNum += button.value;
+      updateDisplay();
+    }
   };
 });
