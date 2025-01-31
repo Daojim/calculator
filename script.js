@@ -84,6 +84,8 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
           parseFloat(secondNum)
         );
         alert(result);
+        displayNum = result;
+        updateDisplay();
       }
     }
   };
