@@ -54,7 +54,7 @@ function clearDisplay() {
 
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
-    if (displayNum === 0 || displayNum === "0") {
+    if (displayNum === 0 || displayNum === "0" || displayNum === result) {
       displayNum = button.value;
       updateDisplay();
     } else if (displayNum !== 0) {
@@ -85,6 +85,7 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
         );
         alert(result);
         displayNum = result;
+        firstNum = result;
         updateDisplay();
       }
     }
