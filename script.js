@@ -62,6 +62,8 @@ function clgEverything() {
 }
 
 function minorReset() {
+  displayNum = result;
+  result = firstNum;
   secondOperator = null;
   secondNum = null;
   updateDisplay();
@@ -102,34 +104,22 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
           parseFloat(secondNum)
         );
         alert(result);
-        displayNum = result;
-        firstNum = result;
-        secondNum = null;
-        secondOperator = null;
-        updateDisplay();
+        minorReset();
       } else if (firstOperator === secondOperator) {
         result = operate(
           firstOperator,
           parseFloat(firstNum),
           parseFloat(secondNum)
         );
-        displayNum = result;
-        firstNum = result;
-        secondOperator = null;
-        secondNum = null;
-        updateDisplay();
+        minorReset();
       } else if (firstOperator !== secondOperator) {
         result = operate(
           firstOperator,
           parseFloat(firstNum),
           parseFloat(secondNum)
         );
-        displayNum = result;
-        firstNum = result;
         firstOperator = secondOperator;
-        secondOperator = null;
-        secondNum = null;
-        updateDisplay();
+        minorReset();
       }
     }
   };
