@@ -52,6 +52,21 @@ function clearDisplay() {
   updateDisplay();
 }
 
+function clgEverything() {
+  console.log("firstNum is " + firstNum);
+  console.log("secondNum is" + secondNum);
+  console.log("firstOperator is " + firstOperator);
+  console.log("secondOperator is " + secondOperator);
+  console.log("result is " + result);
+  console.log("displayNum is " + displayNum);
+}
+
+function minorReset() {
+  secondOperator = null;
+  secondNum = null;
+  updateDisplay();
+}
+
 const operand = document.querySelectorAll(".operand").forEach((button) => {
   button.onclick = function () {
     if (displayNum === 0 || displayNum === "0" || displayNum === result) {
@@ -90,16 +105,29 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
         displayNum = result;
         firstNum = result;
         secondNum = null;
+        secondOperator = null;
         updateDisplay();
-      } else {
+      } else if (firstOperator === secondOperator) {
         result = operate(
           firstOperator,
           parseFloat(firstNum),
           parseFloat(secondNum)
         );
-        console.log(result);
         displayNum = result;
         firstNum = result;
+        secondOperator = null;
+        secondNum = null;
+        updateDisplay();
+      } else if (firstOperator !== secondOperator) {
+        result = operate(
+          firstOperator,
+          parseFloat(firstNum),
+          parseFloat(secondNum)
+        );
+        displayNum = result;
+        firstNum = result;
+        firstOperator = secondOperator;
+        secondOperator = null;
         secondNum = null;
         updateDisplay();
       }
