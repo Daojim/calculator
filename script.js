@@ -67,6 +67,9 @@ const operand = document.querySelectorAll(".operand").forEach((button) => {
 const operator = document.querySelectorAll(".operator").forEach((button) => {
   button.onclick = function () {
     if (firstNum === null) {
+      if (button.value === "equals") {
+        return;
+      }
       firstNum = displayNum;
       firstOperator = button.value;
       alert(firstNum);
@@ -77,7 +80,7 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
       secondOperator = button.value;
       alert(secondNum);
       alert(secondOperator);
-      if (secondOperator === "equals" || secondOperator === equals) {
+      if (secondOperator === "equals") {
         result = operate(
           firstOperator,
           parseFloat(firstNum),
@@ -86,6 +89,18 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
         alert(result);
         displayNum = result;
         firstNum = result;
+        secondNum = null;
+        updateDisplay();
+      } else {
+        result = operate(
+          firstOperator,
+          parseFloat(firstNum),
+          parseFloat(secondNum)
+        );
+        console.log(result);
+        displayNum = result;
+        firstNum = result;
+        secondNum = null;
         updateDisplay();
       }
     }
