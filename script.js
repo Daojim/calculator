@@ -95,9 +95,15 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
     } else if (firstNum !== null && secondNum === null) {
       secondNum = displayNum;
       secondOperator = button.value;
+
       alert(secondNum);
       alert(secondOperator);
       if (secondOperator === "equals") {
+        if (secondNum === "0" && firstOperator === "divide") {
+          displayNum = "nice try KEKW";
+          updateDisplay();
+          return;
+        }
         result = operate(
           firstOperator,
           parseFloat(firstNum),
