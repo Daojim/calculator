@@ -113,7 +113,7 @@ const operator = document.querySelectorAll(".operator").forEach((button) => {
 
       if (secondOperator === "equals") {
         if (secondNum === "0" && firstOperator === "divide") {
-          displayNum = "nice try KEKW";
+          displayNum = "haha";
           updateDisplay();
           return;
         }
